@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D5449B0-6372-4902-81EA-747A5B280F71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TRACNGHIEMBYWINFORM</RootNamespace>
+    <AssemblyName>TRACNGHIEMBYWINFORM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\super\Desktop\PROJECT\Quiz App\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8EFE439E4A20E205318D83E519FF3DF271ABE048</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TRACNGHIEMBYWINFORM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AcroPDFLib">
+      <HintPath>C:\Users\super\Desktop\CNPM\FaceRecProOV\bin\Debug\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=5.7.5.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.7.5\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.7.0-develop00310\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.7.0-develop00310\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.2.41.0\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.Api.2.41.0\lib\net45\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=2.1.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.2.1.3\lib\net462\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WordToPDF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WordToPDF.1.0.0\lib\net452\WordToPDF.dll</HintPath>
+    </Reference>
+    <Reference Include="Z.Dapper.Plus, Version=4.0.17.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.4.0.17\lib\net45\Z.Dapper.Plus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_comment_String.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_comment_String.Designer.cs">
+      <DependentUpon>Form_comment_String.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HowToUse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HowToUse.Designer.cs">
+      <DependentUpon>Form_HowToUse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_list_PDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_list_PDF.Designer.cs">
+      <DependentUpon>Form_list_PDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rank.Designer.cs">
+      <DependentUpon>Form_Rank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_set_Time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_set_Time.Designer.cs">
+      <DependentUpon>Form_set_Time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_splashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_splashScreen.Designer.cs">
+      <DependentUpon>Form_splashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXPORT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EXPORT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Export_File_Exporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export_File_Exporting.Designer.cs">
+      <DependentUpon>Export_File_Exporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Begin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Begin.Designer.cs">
+      <DependentUpon>Form_Begin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_load_Image.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_load_Image.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Export_Random_Exporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export_Random_Exporting.Designer.cs">
+      <DependentUpon>Export_Random_Exporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Activity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Activity.Designer.cs">
+      <DependentUpon>UC_Activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_check_Answer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_check_Answer.Designer.cs">
+      <DependentUpon>UC_check_Answer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_control_Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_control_Account.Designer.cs">
+      <DependentUpon>UC_control_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_delete_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_delete_Profile.Designer.cs">
+      <DependentUpon>UC_delete_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeThi.cs" />
+    <Compile Include="Form_Question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Question.Designer.cs">
+      <DependentUpon>Form_Question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Document.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Document.Designer.cs">
+      <DependentUpon>Form_Document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_edit_Question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_edit_Question.Designer.cs">
+      <DependentUpon>Form_edit_Question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Test.Designer.cs">
+      <DependentUpon>Form_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_add_Single.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_add_Single.Designer.cs">
+      <DependentUpon>Form_add_Single.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_signUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_signUp.Designer.cs">
+      <DependentUpon>Form_signUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Search.Designer.cs">
+      <DependentUpon>Form_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_get_Answer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_get_Answer.Designer.cs">
+      <DependentUpon>Form_get_Answer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_import_Answer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_import_Answer.Designer.cs">
+      <DependentUpon>Form_import_Answer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Score.Designer.cs">
+      <DependentUpon>Form_Score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form_Random.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Random.Designer.cs">
+      <DependentUpon>Form_Random.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Profile.Designer.cs">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Rank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Rank.Designer.cs">
+      <DependentUpon>UC_Rank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Note.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Note.Designer.cs">
+      <DependentUpon>UC_Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_send_Email.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_send_Email.Designer.cs">
+      <DependentUpon>UC_send_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_update_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_update_Information.Designer.cs">
+      <DependentUpon>Form_update_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_add_Fromfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_add_Fromfile.Designer.cs">
+      <DependentUpon>Form_add_Fromfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_reset_Password.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_reset_Password.Designer.cs">
+      <DependentUpon>UC_reset_Password.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form_comment_String.resx">
+      <DependentUpon>Form_comment_String.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HowToUse.resx">
+      <DependentUpon>Form_HowToUse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_list_PDF.resx">
+      <DependentUpon>Form_list_PDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rank.resx">
+      <DependentUpon>Form_Rank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_set_Time.resx">
+      <DependentUpon>Form_set_Time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_splashScreen.resx">
+      <DependentUpon>Form_splashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXPORT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EXPORT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export_File_Exporting.resx">
+      <DependentUpon>Export_File_Exporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Begin.resx">
+      <DependentUpon>Form_Begin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export_Random_Exporting.resx">
+      <DependentUpon>Export_Random_Exporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Activity.resx">
+      <DependentUpon>UC_Activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_check_Answer.resx">
+      <DependentUpon>UC_check_Answer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_control_Account.resx">
+      <DependentUpon>UC_control_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_delete_Profile.resx">
+      <DependentUpon>UC_delete_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Question.resx">
+      <DependentUpon>Form_Question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Document.resx">
+      <DependentUpon>Form_Document.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_edit_Question.resx">
+      <DependentUpon>Form_edit_Question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Test.resx">
+      <DependentUpon>Form_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_add_Single.resx">
+      <DependentUpon>Form_add_Single.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_signUp.resx">
+      <DependentUpon>Form_signUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Search.resx">
+      <DependentUpon>Form_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_get_Answer.resx">
+      <DependentUpon>Form_get_Answer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_import_Answer.resx">
+      <DependentUpon>Form_import_Answer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Score.resx">
+      <DependentUpon>Form_Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Form_Random.resx">
+      <DependentUpon>Form_Random.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Profile.resx">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Note.resx">
+      <DependentUpon>UC_Note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_reset_Password.resx">
+      <DependentUpon>UC_reset_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Rank.resx">
+      <DependentUpon>UC_Rank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_send_Email.resx">
+      <DependentUpon>UC_send_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_update_Information.resx">
+      <DependentUpon>Form_update_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_add_Fromfile.resx">
+      <DependentUpon>Form_add_Fromfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model_load_Image.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_load_Image.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model_load_Image.edmx.diagram">
+      <DependentUpon>Model_load_Image.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TRACNGHIEMBYWINFORM_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avosoft-Warm-Toolbar-Print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Awicons-Vista-Artistic-Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chrisbanks2-Cold-Fusion-Hd-Speed-test.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-9-Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-9-Save-as.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-9-Stats.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-9-Tests.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-Briefcase.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-FAQ.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-Help-desk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graphicloads-Filetype-Word-doc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icojam-Blue-Bits-Math-add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jommans-Mushroom-Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-application-exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Raindropmemory-Red-Little-Shoes-Help-Info-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rokey-Fantastic-Dream-Connect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailicon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailicon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_load_Image.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_load_Image.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\laptop.ico" />
+    <None Include="Resources\desktop-computer.png" />
+    <None Include="Resources\laptop.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Core.2.41.0\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.41.0\build\net45\Grpc.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Grpc.Core.2.41.0\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.41.0\build\net45\Grpc.Core.targets')" />
+</Project>
